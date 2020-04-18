@@ -44,7 +44,6 @@ public class Gumball implements Serializable {
     }
 
     public Ellipse2D getShape() {
-       
         return new Ellipse2D.Double(x, y, XSIZE, YSIZE);
     }
 
