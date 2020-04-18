@@ -23,15 +23,15 @@ public class ApplicationRunnable implements Runnable {
     public void run() {
         boolean allowBubbles = true;
         while (allowBubbles) {
-        try {
-            bubble.move(component.getBounds());
-            component.repaint();
-            Thread.sleep(CommonConstant.DELAY);
-        } catch (InterruptedException e) { 
-            allowBubbles = false;
-            LOGGER.log(Level.WARNING, "Interrupted!", e);
-            Thread.currentThread().interrupt();
-        }
+            try {
+                bubble.move(component.getBounds());
+                component.repaint();
+                Thread.sleep(CommonConstant.DELAY);
+            } catch (InterruptedException e) { 
+                allowBubbles = false;
+                LOGGER.log(Level.WARNING, "Interrupted!", e);
+                Thread.currentThread().interrupt();
+            }
         }
     }
 
