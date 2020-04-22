@@ -40,7 +40,12 @@ public class ApplicationFrame extends JFrame implements Serializable{
         Thread thread = new Thread(runnable);
         thread.start();
     }
-
+    /**
+     * Add a button to the UI frame
+     * @param container
+     * @param title
+     * @param listener
+     */
     public void addButton(Container container, String title, ActionListener listener) {
         JButton button = new JButton(title);
         container.add(button);
